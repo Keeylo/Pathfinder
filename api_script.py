@@ -1,17 +1,28 @@
 
 import requests
 
+import json
+
+
 # Set the API key
-API_KEY = "YOUR_API_KEY"
+with open('api_key.txt', 'r') as f:
+    API_KEY = f.read()
 
-# Make the request
-response = requests.get("https://api.example.com/v1/users",
-                        headers={"Authorization": "Bearer {}".format(API_KEY)})
 
-# Check the response status code
+#print(API_KEY)
+
+mapstring = ("https://maps.googleapis.com/maps/api/place/findplacefromtext/json?fields=formatted_address%2Cname%2Crating%2Copening_hours%2Cgeometry&input=Museum%20of%20Contemporary%20Art%20Australia&inputtype=textquery&key={id}").format(id = API_KEY)
+response = requests.get(mapstring)
+
+data = response.json()
+
 if response.status_code == 200:
-  # The request was successful
-  # Do something with the response data
+  with open('tester.json', 'w') as f:
+     json.dump(data, f)
+
 else:
-  # The request failed
-  # Handle the error
+   print("failed")
+
+
+
+
