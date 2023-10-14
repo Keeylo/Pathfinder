@@ -1,0 +1,46 @@
+@keyframes color {
+    0%   { background: #385fac; }
+    20%  { background: #04975a; }
+    40%  { background: #71c708; }
+    60%  { background: #019155; }
+    80%  { background: #52c8f7; }
+    100% { background: #231d51; }
+  }
+  body {
+    background: #33CCCC; /* Fallback */
+    animation: color 9s infinite linear;
+    text-align: center;
+    padding: 2em;
+    overflow: hidden;
+  }
+  
+  .info {
+    color: azure;
+    min-width: 500px;
+  }
+  .text {
+    color: azure;
+  }
+  .button {
+    background-color: rgb(72, 72, 72) ;
+    color: white;
+    border: white;
+    height: 5vmin;
+    width: 13vmin;
+    border-radius: 13vmin;
+    cursor: pointer;
+  }
+  .button:hover {
+    background-color: silver;
+    color: black;
+    
+  }
+
+  #image-track {
+    display: flex;
+    gap: 4vmin;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-15%, -50%);
+  }

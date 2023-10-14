@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <div id="image-track" data-mouse-down-at="0" data-prev-percentage="-21">  
+    <div class="info">
+      <h1>THE PATHS</h1>
+      <p class="description" >paths</p>
+      <!-- Button to toggle additional data -->
+      <button id="button" class="button">button</button>
+      <!-- Additional data (hidden by default) -->
+      <div id="additionalData" class="hidden">
+        <p>You get no bitches.</p>
+        <p>You can add more information here.</p>
+      </div>
+    </div>
+  <script>
+    // JavaScript to toggle the display of additional data
+    document.getElementById('button').addEventListener('click', function() {
+        var additionalData = document.getElementById('additionalData');
+        if (additionalData.style.display === 'none' || additionalData.style.display === '') {
+            additionalData.style.display = 'block';
+            this.textContent = 'button 1';
+        } else {
+            additionalData.style.display = 'none';
+            this.textContent = 'button 2';
+        }
+    }); 
+  </script>
+</body>
+</html>
