@@ -1,5 +1,5 @@
 # Pathfinder
 
-#Authors: Nathan Hernandez ...
+#Authors: Nathan Hernandez, Alex Pham...
 
 # uses the GOOGLE API 
